@@ -1,0 +1,72 @@
+@charset "utf-8";
+#post-content a.Mo66CnBilifanItem{
+	line-height: 20px;
+	white-space: nowrap;
+	box-shadow: 0px 0px 3px rgba(0,0,0,0.2);
+	width: 45%;
+	margin: 1.5%;
+	float: left;
+	overflow: hidden;
+	display: block;
+	padding: 1%;
+	height:88px;
+	background: #fff;
+	color: #14191e;
+	font-family:-apple-system,BlinkMacSystemFont,Helvetica Neue,PingFang SC,Microsoft YaHei,Source Han Sans SC,Noto Sans CJK SC,WenQuanYi Micro Hei,sans-serif;
+}
+#post-content a.Mo66CnBilifanItem:hover{
+	color: #14191e;
+	opacity: 0.8;
+	filter: saturate(150%);
+	-webkit-filter: saturate(150%);
+	-moz-filter: saturate(150%);
+	-o-filter: saturate(150%);
+	-ms-filter: saturate(150%);
+}
+#post-content a.Mo66CnBilifanItem img{
+	width:21%;
+	height:100%;
+	display:inline-block;
+	float:left;
+	margin-right:5%;
+}
+#post-content a.Mo66CnBilifanItem .textBox{
+	text-overflow:ellipsis;overflow:hidden;
+	position: relative;
+	z-index: 1;
+	height: 100%;
+}
+#post-content a.Mo66CnBilifanItem div.jinduBG{
+	height:16px;
+	width: 100%;
+	background-color:gray;
+	display:inline-block;
+	border-radius:4px;
+	position: absolute;
+	bottom: 3px;
+}
+#post-content a.Mo66CnBilifanItem div.jinduFG
+  {
+	height:16px;
+	background-color:#ff8c83;
+	border-radius:4px;
+	position: absolute;
+	bottom: 0px;
+	z-index: 1;
+}
+#post-content a.Mo66CnBilifanItem div.jinduText
+{
+	width:100%;height:auto;
+	text-align:center;
+	color:#fff;
+	line-height:15px;
+	font-size:15px;
+	position: absolute;
+	bottom: 0px;
+	z-index: 2;
+}
+@media screen and (max-width:1000px) {
+	#post-content a.Mo66CnBilifanItem{
+			width:95%;
+		}
+}
