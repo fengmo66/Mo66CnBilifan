@@ -1,5 +1,7 @@
 # Mo66CnBilifan-Typecho-Plugin
 
+![](https://cdn.jsdelivr.net/gh/fengmo66/img/images/2021/01/27/20210128104517.png)
+
 [作者博客](http://mo66.cn)
 
 ## 介绍
