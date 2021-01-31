@@ -61,9 +61,9 @@ class BilibiliAnimeInfo{
         curl_close($ch);//关闭连接
         return $info['data']['total'];
     }
-    public function __construct($uid)
+    public function __construct($uid,$cookie)
     {
-        $this->sum=$this->getpage($uid);
+        $this->sum=$this->getpage($uid,$cookie);
         for($i=1;$i<=ceil($this->sum/15);$i++)
         {
             $url="https://api.bilibili.com/x/space/bangumi/follow/list?type=1&follow_status=0&pn=$i&ps=15&vmid=$uid";
@@ -74,6 +74,7 @@ class BilibiliAnimeInfo{
                 //发送请求头
                 "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.90 Safari/537.36",
                 "Referer: https://www.bilibili.com/",
+				"Cookie: $cookie",
             ));
             $info=json_decode(curl_exec($ch),true);
             curl_close($ch);//关闭连接

@@ -4,7 +4,7 @@
  *
  * @package Mo66CnBilifan
  * @author FengMo
- * @version 1.0.1
+ * @version 1.0.2
  * @link http://Mo66.cn
  */
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
@@ -46,6 +46,8 @@ class Mo66CnBilifan_Plugin implements Typecho_Plugin_Interface
         /** 分类名称 */
         $name = new Typecho_Widget_Helper_Form_Element_Text('Mo66CnBilifan_uid', NULL, 'uid', _t('请输入b站uid'));
         $form->addInput($name);
+        $name = new Typecho_Widget_Helper_Form_Element_Text('Mo66CnBilifan_cookie', NULL, 'cookie', _t('请输入b站cookie'));
+        $form->addInput($name);
     }
 
     /**
@@ -68,7 +70,8 @@ class Mo66CnBilifan_Plugin implements Typecho_Plugin_Interface
         echo '<meta name="referrer" content="never">';
         echo '<link rel="stylesheet" type="text/css" href="' . Helper::options()->pluginUrl . '/Mo66CnBilifan/css/style.css" />';
         $uid=Typecho_Widget::widget('Widget_Options')->plugin('Mo66CnBilifan')->Mo66CnBilifan_uid;
-        $bili=new BilibiliAnimeInfo($uid);
+		$cookie=Typecho_Widget::widget('Widget_Options')->plugin('Mo66CnBilifan')->Mo66CnBilifan_cookie;
+        $bili=new BilibiliAnimeInfo($uid,$cookie);
         for($i=0;$i<$bili->sum;$i++){
             echo '<a href="https://www.bilibili.com/bangumi/play/ss'.$bili->season_id[$i].'" target=\'_blank\' class=\'Mo66CnBilifanItem\'>
                         <img src="'.$bili->image_url[$i].'" />
