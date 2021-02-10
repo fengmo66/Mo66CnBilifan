@@ -4,7 +4,7 @@
  *
  * @package Mo66CnBilifan
  * @author FengMo
- * @version 1.0.2
+ * @version 1.0.3
  * @link http://Mo66.cn
  */
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
